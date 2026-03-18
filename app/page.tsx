@@ -8,7 +8,7 @@ export default function Home() {
     <main className={styles.main}>
       <Example />
       <Card
-        label="Design Systems - v1"
+        label="Design Systems - YT Alan"
         title="Building with Figma MCP"
         description="Learn how to connect your design tokens directly to your codebase and keep your UI in sync with your design files."
         tag="Tutorial"
