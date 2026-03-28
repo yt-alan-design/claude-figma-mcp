@@ -1,21 +1,7 @@
-import styles from "./page.module.css";
-import Example from "@/components/Example/Example";
-import Card from "@/components/Card/Card";
-import heroImage from "@/public/images/hero.jpg";
+import VitalDataForm from "@/components/VitalDataForm/VitalDataForm";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Example />
-      <Card
-        label="Design Systems - YT Alan"
-        title="Building with Figma MCP"
-        description="Learn how to connect your design tokens directly to your codebase and keep your UI in sync with your design files."
-        tag="Tutorial"
-        buttonLabel="Read more"
-        image={heroImage}
-        imageAlt="Cold brew drinks"
-      />
-    </main>
+    <VitalDataForm />
   );
 }

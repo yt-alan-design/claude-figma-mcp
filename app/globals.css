@@ -1,6 +1,53 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf9f9;
+  --foreground: #1a1c1c;
+
+  /* Custom Colors from Design Reference */
+  --color-on-secondary-fixed: #1f1b19;
+  --color-surface-variant: #e2e2e2;
+  --color-secondary-fixed: #eae0dd;
+  --color-primary-fixed-dim: #ffb4a9;
+  --color-surface-container-low: #f4f3f3;
+  --color-surface-container-high: #e8e8e8;
+  --color-secondary-fixed-dim: #cec5c1;
+  --color-on-primary-fixed: #410000;
+  --color-on-primary-fixed-variant: #930002;
+  --color-tertiary: #5b5b5c;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-highest: #e2e2e2;
+  --color-on-background: #1a1c1c;
+  --color-surface-dim: #dadada;
+  --color-primary-fixed: #ffdad5;
+  --color-on-secondary-container: #6a6360;
+  --color-on-surface-variant: #5d3f3b;
+  --color-on-primary-container: #fffbfa;
+  --color-primary-container: #e1251b;
+  --color-surface-container: #eeeeee;
+  --color-on-primary: #ffffff;
+  --color-inverse-primary: #ffb4a9;
+  --color-on-tertiary-fixed-variant: #464747;
+  --color-background: #faf9f9;
+  --color-tertiary-fixed: #e4e2e2;
+  --color-on-tertiary-fixed: #1b1c1c;
+  --color-on-tertiary-container: #fdfbfb;
+  --color-outline-variant: #e7bdb7;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-surface-bright: #faf9f9;
+  --color-tertiary-fixed-dim: #c7c6c6;
+  --color-secondary-container: #eae0dd;
+  --color-error: #ba1a1a;
+  --color-on-tertiary: #ffffff;
+  --color-inverse-surface: #2f3131;
+  --color-inverse-on-surface: #f1f1f0;
+  --color-on-secondary-fixed-variant: #4b4643;
+  --color-surface-tint: #c00004;
+  --color-primary: #bb0004;
+  --color-outline: #926f69;
+  --color-on-surface: #1a1c1c;
+  --color-on-secondary: #ffffff;
+  --color-on-error: #ffffff;
+  --color-secondary: #635d5b;
 
   /* Figma Design Tokens */
   --space-100: 4px;
@@ -14,10 +61,10 @@
   --ds-color-button-text-default: #ffffff;
   --ds-color-label-text: #ef1616;
   --ds-color-label-bg: #ffcaca;
-  --header-font-family: 'Inter', sans-serif;
+  --header-font-family: var(--font-inter), sans-serif;
   --header-font-weight: 700;
   --header-size: 36px;
-  --body-font-family: 'Inter', sans-serif;
+  --body-font-family: var(--font-inter), sans-serif;
   --body-font-weight: 400;
   --body-size: 16px;
   --body-size-small: 14px;
@@ -40,11 +87,14 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-on-background);
+  background: var(--color-background);
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: max(884px, 100dvh);
+  display: flex;
+  flex-direction: column;
 }
 
 * {
