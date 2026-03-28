@@ -1,7 +1,38 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./VitalDataForm.module.css";
 
+interface VitalData {
+  systolic: string;
+  diastolic: string;
+  heartRate: string;
+  steps: string;
+  duration: string;
+  weight: string;
+}
+
 export default function VitalDataForm() {
+  const [formData, setFormData] = useState<VitalData>({
+    systolic: "",
+    diastolic: "",
+    heartRate: "",
+    steps: "",
+    duration: "",
+    weight: "",
+  });
+
+  const handleChange = (e: { target: { name: string; value: string } }) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    console.log("Logging data:", formData);
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -23,7 +54,7 @@ export default function VitalDataForm() {
           </p>
         </section>
 
-        <form className={styles.formGroup}>
+        <form className={styles.formGroup} onSubmit={handleSubmit}>
           {/* Blood Pressure Card */}
           <div className={styles.card}>
             <div className={styles.cardHeader}>
@@ -36,11 +67,11 @@ export default function VitalDataForm() {
             <div className={styles.cardGrid}>
               <div className={styles.inputGroup}>
                 <label className={styles.inputLabel}>Systolic</label>
-                <input className={styles.inputField} placeholder="120" type="number" />
+                <input className={styles.inputField} name="systolic" value={formData.systolic} onChange={handleChange} placeholder="120" type="number" />
               </div>
               <div className={styles.inputGroup}>
                 <label className={styles.inputLabel}>Diastolic</label>
-                <input className={styles.inputField} placeholder="80" type="number" />
+                <input className={styles.inputField} name="diastolic" value={formData.diastolic} onChange={handleChange} placeholder="80" type="number" />
               </div>
             </div>
           </div>
@@ -56,7 +87,7 @@ export default function VitalDataForm() {
             </div>
             <div className={styles.inputGroup}>
               <label className={styles.inputLabel}>Resting Pulse</label>
-              <input className={styles.inputField} placeholder="72" type="number" />
+              <input className={styles.inputField} name="heartRate" value={formData.heartRate} onChange={handleChange} placeholder="72" type="number" />
             </div>
           </div>
 
@@ -67,14 +98,14 @@ export default function VitalDataForm() {
                 <span className={`material-symbols-outlined ${styles.primaryIconSmall}`}>steps</span>
                 <span className={styles.bentoTitle}>Steps</span>
               </div>
-              <input className={styles.bentoInput} placeholder="10,000" type="number" />
+              <input className={styles.bentoInput} name="steps" value={formData.steps} onChange={handleChange} placeholder="10,000" type="number" />
             </div>
             <div className={styles.bentoCard}>
               <div className={styles.bentoHeader}>
                 <span className={`material-symbols-outlined ${styles.primaryIconSmall}`}>timer</span>
                 <span className={styles.bentoTitle}>Duration</span>
               </div>
-              <input className={styles.bentoInput} placeholder="Min" type="text" />
+              <input className={styles.bentoInput} name="duration" value={formData.duration} onChange={handleChange} placeholder="Min" type="text" />
             </div>
           </div>
 
@@ -89,7 +120,7 @@ export default function VitalDataForm() {
               </div>
               <span className={styles.unitLabel}>KG</span>
             </div>
-            <input className={styles.inputFieldOptional} placeholder="70.5" type="number" step="0.1" />
+            <input className={styles.inputFieldOptional} name="weight" value={formData.weight} onChange={handleChange} placeholder="70.5" type="number" step="0.1" />
           </div>
 
           {/* Submission Area */}
