@@ -1,0 +1,360 @@
+.header {
+  background-color: rgba(250, 249, 249, 0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: rgba(15, 23, 42, 0.8); /* slate-900 */
+  }
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logoText {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: #bb0004; /* Matches inline color #bb0004 in reference HTML */
+  text-transform: uppercase;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 32px;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.editorialHeader {
+  margin-bottom: 40px;
+}
+
+.headerLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.description {
+  color: var(--color-secondary);
+  font-size: 14px;
+  line-height: 1.625;
+  max-width: 90%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--color-surface-container-lowest);
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(47, 49, 49, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.primaryIcon {
+  color: var(--color-primary);
+}
+
+.secondaryIcon {
+  color: var(--color-secondary);
+}
+
+.primaryIconSmall {
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardTitleSecondary {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary);
+}
+
+.unitLabel {
+  font-size: 10px;
+  color: var(--color-outline);
+  font-weight: 500;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.inputField {
+  width: 100%;
+  background-color: var(--color-surface-container-low);
+  border: none;
+  border-radius: 0;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inputField:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.bentoCard {
+  background-color: var(--color-surface-container-lowest);
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(47, 49, 49, 0.03);
+}
+
+.bentoHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bentoTitle {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.bentoInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-outline-variant);
+  border-radius: 0;
+  padding: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bentoInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.cardOptional {
+  background-color: var(--color-surface-container);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.optionalText {
+  font-size: 9px;
+  text-transform: lowercase;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.inputFieldOptional {
+  width: 100%;
+  background-color: var(--color-surface-container-lowest);
+  border: none;
+  border-radius: 0;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inputFieldOptional:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.submissionArea {
+  padding-top: 16px;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 20px 0;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 20px 25px -5px rgba(187, 0, 4, 0.1), 0 8px 10px -6px rgba(187, 0, 4, 0.1);
+}
+
+.submitButton:active {
+  transform: scale(0.95);
+}
+
+.securityLabel {
+  text-align: center;
+  font-size: 10px;
+  color: var(--color-outline);
+  margin-top: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.imageBleed {
+  margin-top: 48px;
+  margin-left: -24px;
+  margin-right: -24px;
+  height: 192px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-background), transparent);
+}
+
+.imageVerificationLabel {
+  position: absolute;
+  bottom: 16px;
+  left: 24px;
+  background-color: rgba(255, 255, 255, 0.7); /* surface-container-lowest/70 */
+  backdrop-filter: blur(12px);
+  padding: 6px 12px;
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(250, 249, 249, 0.8);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(231, 189, 183, 0.15); /* border-[#e7bdb7]/15 */
+  box-shadow: 0 -10px 30px rgba(47, 49, 49, 0.03);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 72px; /* h-18 approx */
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8; /* slate-400 */
+  padding-top: 8px;
+  padding-bottom: 16px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.navItem:hover {
+  color: #bb0004; /* #bb0004 */
+}
+
+.navItem:active {
+  transform: scale(0.9);
+}
+
+.navItemActive {
+  color: #bb0004;
+  border-top: 2px solid #bb0004;
+}
+
+.navItem .material-symbols-outlined {
+  margin-bottom: 4px;
+}
+
+.navLabel {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
